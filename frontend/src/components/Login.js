@@ -6,7 +6,6 @@ import './Login.css'; // Plik CSS do stylizacji tła
 
 const Login = ({ onLogin }) => {
     const [password, setPassword] = useState('');
-    const [error, setError] = useState(false);
     const [snackbarOpen, setSnackbarOpen] = useState(false);
     const [snackbarMessage, setSnackbarMessage] = useState('');
     const [snackbarSeverity, setSnackbarSeverity] = useState('success');
@@ -21,7 +20,6 @@ const Login = ({ onLogin }) => {
             setSnackbarOpen(true);
             setTimeout(onLogin, 1500); // Wywołaj funkcję logowania po zamknięciu Snackbara
         } else {
-            setError(true);
             setSnackbarMessage('Niepoprawne hasło, spróbuj ponownie.');
             setSnackbarSeverity('error');
             setSnackbarOpen(true);
