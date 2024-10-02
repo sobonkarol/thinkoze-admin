@@ -93,7 +93,6 @@ function AddProduct() {
                         placeholder="Podaj krótki opis"
                         value={description}
                         onChange={(e) => setDescription(e.target.value)}
-                        required
                     />
                 </Form.Group>
 
