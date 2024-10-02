@@ -18,7 +18,7 @@ function AddProduct() {
         e.preventDefault();
 
         // Walidacja formularza - wymagane pola
-        if (!name || !price || !description) {
+        if (!name || !price ) {
             setSnackbarMessage('Nazwa, cena i krótki opis są wymagane!');
             setSnackbarSeverity('error');
             setSnackbarOpen(true);
